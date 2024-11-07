@@ -6,6 +6,10 @@ h1 {
     line-height: 130%; /* 52px */
     text-transform: uppercase;
     font-family: "Days One", sans-serif;
+    max-width: 880px;
+    span {
+        color: #990201;
+    }
 }
 
 h2 {

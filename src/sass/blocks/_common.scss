@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33%;
+    padding: 10px 10px 30px 10px;
+    border-radius: 20px;
+    border: 1px solid #E5E5E5;
+    background: #F9F9F9;
+    height: 420px;
+    &__content {
+        padding: 0 20px;
+    }
+    &__img {
+        height: 150px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 130%; 
+        max-width: 260px;
+        font-family: "Days One", sans-serif;
+    }
+    &__descr {
+        font-size: 16px;
+        max-width: 330px;
+    }
+}
