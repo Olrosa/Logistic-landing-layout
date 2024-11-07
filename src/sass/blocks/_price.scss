@@ -1,0 +1,56 @@
+.price {
+    &__title {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    &__descr {
+        max-width: 482px;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__offer {
+        margin-top: 40px;
+        display: flex;
+        gap: 24px;
+    }
+    &__item {
+        padding: 40px 20px;
+        display: flex;
+        width: calc(25% - 12px);
+        flex-direction: column;
+        border-radius: 20px;
+        border: 1px solid #E5E5E5;
+        background: linear-gradient(0deg, #F9F9F9 0%, #F9F9F9 100%), #EBEBEB;
+        overflow: hidden;
+        &-title {
+            font-size: 32px;
+            color: #990201;
+            font-family: "Days One", sans-serif;
+        }
+        &-divider {
+            margin-top: 30px;
+            margin-left: -20px;
+            width: 150%;
+            height: 1px;
+            background: #E5E5E5;
+        }
+        &-about {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 40px;
+        }
+        &-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #990201;
+        }
+        &-descr {
+            font-size: 16px;
+        }
+    }
+}
