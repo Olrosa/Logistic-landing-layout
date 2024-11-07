@@ -1,0 +1,57 @@
+.form {
+    padding: 45px 0;
+    border-radius: 20px;
+    border: 1px solid #E5E5E5;
+    background: #F9F9F9;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &-time {
+        color: #990201;
+        font-size: 24px;
+    }
+    &-step {
+        color: #990201;
+        font-size: 20px;
+    }
+    &-point {
+        font-size: 24px;
+        font-family: "Days One", sans-serif;
+    }
+    &-section {
+        display: flex;
+        padding: 0 40px;
+    }
+    &-divider {
+        width: 100%;
+        height: 1px;
+        background: #C0C0C0;    
+    }
+    &-btn-calc {
+        margin-top: 30px;
+    }
+    &-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+}
+
+.input {
+    padding: 12px 0;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #890201;
+    background: #FFF;
+    color: #2E2E2E;
+    font-size: 16px;
+    text-align: center;
+    &-small {
+        width: 200px;
+    }
+    &-medium {
+        width: 300px;
+    }
+}

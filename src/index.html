@@ -9,10 +9,6 @@
     <meta http-equiv="content-language" content="ru"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="icon" type="image/x-icon" href="#">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -20,12 +16,12 @@
     <div class="header">
         <div class="wrapper">
             <div class="header__offer">
-                <div class="header__logo">
+                <a href="/" class="header__logo">
                     <img src="icons/logo.png" alt="logo" class="header__logo-img">
                     <p class="header__logo-descr">
                         Транспортная группа компаний “АБСОЛЮТ”
                     </p>
-                </div>
+                </a>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
@@ -99,7 +95,87 @@
     </div>
     <section id="hero" class="hero">
         <div class="wrapper">
-            
+            <img src="img/hero_bg.png" class="hero__bg">
+            <div class="hero__content">
+                <div class="flex-offer-col">
+                    <h1 class="hero__title">
+                        Транспортная <br>
+                        компания <span> “АБСОЛЮТ”</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        <span>
+                            Надежный партнер
+                        </span> на рынке грузоперевозок 
+                    </p>
+                </div>
+                <div class="hero__descr">
+                    - Лучшие цены в вашем регионе<br>
+                    - Расчет тарифов от 10 минут<br>
+                    - Любой вид транспорта<br>
+                    - 10 лет экспертизы в транспортной логистике 
+                </div>
+                <button class="button button-300">
+                    Заказать звонок
+                </button>
+            </div>
+            <form class="form hero__form">
+                <div class="form-content">
+                    <div class="form-section">
+                        <h2 class="flex-1">
+                            Рассчитайте стоимость 
+                        </h2>
+                        <div class="flex-offer-col flex-1">
+                            <span class="form-time">
+                                10 минут
+                            </span>
+                            <span class="form-descr">
+                                Среднее время формирования сметы
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-divider"></div>
+                    <div class="form-section">
+                        <div class="flex-offer-col gap-5 flex-3">
+                            <span class="form-step">
+                                Шаг 1.
+                            </span>
+                            <span class="form-point">
+                                Информация о грузе
+                            </span>
+                        </div>
+                        <div class="form-inputs flex-7">
+                            <input type="text" class="input input-small" placeholder="Место погрузки*">
+                            <input type="text" class="input input-small" placeholder="Место погрузки*">
+                            <input type="text" class="input input-medium" placeholder="Место погрузки*">
+                            <input type="text" class="input input-small" placeholder="Место погрузки*">
+                            <input type="text" class="input input-small" placeholder="Место погрузки*">
+                            <input type="text" class="input input-medium" placeholder="Место погрузки*">
+                        </div>
+                    </div>
+                    <div class="form-divider"></div>
+                    <div class="form-section">
+                        <div class="flex-offer-col gap-5 flex-3">
+                            <span class="form-step">
+                                Шаг 2.
+                            </span>
+                            <span class="form-point">
+                                Ваши контакты
+                            </span>
+                        </div>
+                        <div class="form-inputs flex-7">
+                            <input type="text" class="input input-small" placeholder="Место погрузки*">
+                            <input type="text" class="input input-small" placeholder="Место погрузки*">
+                            <input type="text" class="input input-small" placeholder="Место погрузки*">
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <button class="button form-btn-calc">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+
+            </form>
         </div>
     </section>
     

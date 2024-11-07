@@ -1,3 +1,38 @@
 .hero {
-    
+    position: relative;
+    padding: 84px 0 44px 0;
+    &__bg {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__content {
+        max-width: 630px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__title {
+        span {
+            color: #990201;
+        }
+    }
+    &__subtitle {
+        margin-top: 20px;
+        color: #2E2E2E;
+        font-size: 20px;
+        font-weight: 600;
+        span {
+            color: #990201;
+        }
+    }
+    &__descr {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%; /* 22.4px */
+    }
+    &__form {
+        margin-top: 75px;
+    }
 }

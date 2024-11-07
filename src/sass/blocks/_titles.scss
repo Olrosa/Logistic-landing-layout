@@ -1,11 +1,11 @@
 h1 {
     color: #2E2E2E;
     font-size: 40px;
-    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 52px */
     text-transform: uppercase;
+    font-family: "Days One", sans-serif;
 }
 
 h2 {
@@ -14,11 +14,13 @@ h2 {
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 46.8px */
+    font-family: "Days One", sans-serif;
 }
 
 h3 {
     color: #2E2E2E;
     font-size: 20px;
+    font-family: "Days One", sans-serif;
     .medium {
         font-size: 16px;
     }
