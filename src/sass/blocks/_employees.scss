@@ -1,0 +1,27 @@
+.employees {
+    margin-top: 44px;
+    padding: 180px 0 40px 0;
+    background-image: url('../../img/employees_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__card {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 54px 30px;
+        border-radius: 20px;
+        border: 1px solid #E5E5E5;
+        background: rgba(249, 249, 249, 0.20);
+        backdrop-filter: blur(15px);
+    }
+    &__title {
+        font-size: 28px;
+        font-family: "Days One", sans-serif;
+        line-height: 157%; /* 43.96px */
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
