@@ -19,17 +19,27 @@ h2 {
     font-weight: 400;
     line-height: 130%; /* 46.8px */
     font-family: "Days One", sans-serif;
+    max-width: 880px;
+    text-transform: uppercase;
+    span {
+        color: #990201;
+    }
 }
 
 h3 {
     color: #2E2E2E;
     font-size: 20px;
     font-family: "Days One", sans-serif;
+    max-width: 880px;
+    text-transform: uppercase;
     .medium {
         font-size: 16px;
     }
     .small {
         font-size: 14px;
+    }
+    span {
+        color: #990201;
     }
 }
 
@@ -40,4 +50,8 @@ h4 {
 
 .white {
     color: #fff;
+}
+
+.fs-28 {
+    font-size: 28px;
 }
