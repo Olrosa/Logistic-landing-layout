@@ -1,0 +1,37 @@
+h1 {
+    color: #2E2E2E;
+    font-size: 40px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 52px */
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #2E2E2E;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 46.8px */
+}
+
+h3 {
+    color: #2E2E2E;
+    font-size: 20px;
+    .medium {
+        font-size: 16px;
+    }
+    .small {
+        font-size: 14px;
+    }
+}
+
+h4 {
+    color: #2E2E2E;
+    font-family: "Days One", sans-serif;
+}
+
+.white {
+    color: #fff;
+}
