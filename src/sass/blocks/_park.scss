@@ -1,0 +1,67 @@
+.park {
+    &__offer {
+        display: flex;
+        gap: 20px;
+    }
+    &__info {
+        position: sticky;
+        top: 80px;
+        height: 160px;
+        width: calc(33% - 10px);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }   
+    &__descr {
+        font-size: 16px;
+        font-weight: 600;
+        max-width: 260px;
+    }
+    &__list {
+        width: calc(66% - 10px);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__item {
+        height: 236px;
+        display: flex;
+        border-radius: 20px;
+        border: 1px solid #E5E5E5;
+        background: #F9F9F9;
+        &-icon {
+            margin-top: -10px;
+            display: flex;
+            align-items: center;
+            min-width: 260px;
+            width: 260px;
+            height: 260px;
+            border-radius: 20px;
+            border: 1px solid #D1D1D1;
+            background: #F3F3F3;
+        }
+        &-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 34px 67px;
+    }
+    &__title {
+        font-size: 24px;
+        color: #990201;
+        line-height: 130%; /* 31.2px */
+        font-family: "Days One", sans-serif;
+    }
+    &__about {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 20px;
+        font-size: 14px;
+    }
+}
