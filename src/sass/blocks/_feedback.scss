@@ -1,0 +1,45 @@
+.feedback {
+    margin: 44px 0;
+    padding: 67px 0 55px 0;
+    background-image: url('../../img/feed_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__card {
+        width: 80%;
+        padding: 40px 30px 50px 30px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        border: 1px solid #E5E5E5;
+        background: rgba(249, 249, 249, 0.20);
+        backdrop-filter: blur(15px);
+    }
+    &__title {
+        font-size: 28px;
+        font-family: "Days One", sans-serif;
+        color: #fff;
+        line-height: 157%; /* 43.96px */
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+    }
+    &__time {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+    &__descr {
+        font-size: 20px;
+        color: #fff;
+    }
+    &__form {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 70%;
+        &-input {
+            width: calc(33% - 12px);
+        }
+    }
+}

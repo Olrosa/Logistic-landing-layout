@@ -14,6 +14,9 @@
     &-250 {
         width: 250px;
     }
+    &-200 {
+        width: 200px;
+    }
     &-calc {
         padding: 19px;
         font-style: 24px;
@@ -21,5 +24,9 @@
     &-no-bg {
         background: none;
         border: 2px solid #F0D9D9;
+    }
+    &-big {
+        padding: 20px 0;
+        font-size: 24px;
     }
 }
