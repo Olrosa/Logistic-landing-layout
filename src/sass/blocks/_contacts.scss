@@ -1,0 +1,72 @@
+.contacts {
+    &__offer {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    &__block {
+        width: calc(50% - 15px);
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__contact {
+        display: flex;
+        padding-bottom: 14px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #E5E5E5;;
+        &-icon {    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #E5E5E5;
+            background: #F9F9F9;
+        }
+        &-type {
+            color: #990201;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        &-link {
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+    &__button {
+        margin-top: 40px;
+    }
+    &__card {
+        padding: 25px 13px 40px 13px;
+        display: flex;
+        gap: 16px;
+        border-radius: 20px;
+        border: 1px solid #E5E5E5;
+        background: linear-gradient(0deg, #F9F9F9 0%, #F9F9F9 100%), #D9D9D9;
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &__object {
+        font-family: "Days One", sans-serif;
+        font-size: 14px;
+    }
+    &__logo {
+        object-fit: contain;
+        width: 160px;
+        height: 130px;
+    }
+    &__descr {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 250px;
+    }
+}
