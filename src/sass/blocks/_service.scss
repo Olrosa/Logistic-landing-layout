@@ -1,0 +1,17 @@
+.hero.service {
+    background-image: url('../../img/service_bg.png');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .hero {
+        &__subtitle {
+            margin-top: 30px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 140%;
+            max-width: 680px;
+        }
+    }
+    
+}
