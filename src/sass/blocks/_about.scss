@@ -1,0 +1,43 @@
+.hero.about {
+    background-image: url('../../img/about_bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 164px 0 67px 0;
+    .hero {
+        &__title {
+            max-width: 650px;
+        }
+        &__subtitle {
+            margin-top: 30px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 140%;
+            max-width: 760px;
+        }
+        &__offer {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+        &__item {
+            padding: 54px 30px;
+            width: calc(33% - 10px);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 20px;
+            border: 1px solid #E5E5E5;
+            background: #F9F9F9;
+            &-title {
+                font-size: 24px;
+            }
+            &-descr {
+                color: #000;
+                font-size: 20px;
+            }
+        }
+    }
+    
+}
