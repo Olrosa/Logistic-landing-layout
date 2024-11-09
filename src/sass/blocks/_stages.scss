@@ -1,0 +1,27 @@
+.stages {
+    &__offer {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__item {
+        padding: 75px 30px;
+        width: calc(33.3% - 20px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 20px;
+        border: 1px solid #E5E5E5;
+        background: #F9F9F9;
+    }
+    &__title {
+        font-size: 20px;
+    }
+    &__number {
+        color: #F1F1F1;
+        font-size: 64px;
+        font-weight: 600;
+    }
+}
