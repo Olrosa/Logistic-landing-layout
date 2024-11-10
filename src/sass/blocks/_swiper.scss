@@ -1,0 +1,36 @@
+.swiper {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}
+
+.swiper-scrollbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    width: 100%; /* Задайте ширину 100%, чтобы скроллбар охватывал все слайды */
+    min-width: 100%;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 1px solid #E5E5E5;
+    background: linear-gradient(0deg, #F9F9F9 0%, #F9F9F9 100%), #EBEBEB;
+}
+
+.swiper-scrollbar-drag {
+    background: #E5E5E5; /* Цвет ползунка */
+    border-radius: 20px; /* Скругленные углы ползунка */
+    height: 100%; /* Высота ползунка должна быть такой же, как у скроллбара */
+    border: 1px solid #E5E5E5;
+    cursor: pointer;
+}
+

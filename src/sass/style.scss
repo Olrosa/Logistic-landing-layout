@@ -16,6 +16,10 @@ html {
     color: #2E2E2E;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     font-family: "Raleway", sans-serif;
     text-decoration: none;
@@ -45,6 +49,7 @@ a {
 @import 'blocks/form';
 @import 'blocks/titles';
 @import 'blocks/common';
+@import 'blocks/swiper';
 @import 'blocks/header';
 @import 'blocks/hero';
 @import 'blocks/services';

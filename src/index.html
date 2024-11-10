@@ -191,44 +191,49 @@
                 любых грузов по России и снг
             </h1>
 
-            <div class="services__slider">
-                <div class="services__slide card">
-                    <img src="img/card-img.png" alt="" class="card__img">
-                    <h4 class="card__title">
-                        Перевозка негабаритных и тяжеловесных грузов
-                    </h4>
-                    <p class="card__descr">
-                        Надёжная транспортировка крупногабаритных и тяжелых грузов
-                    </p>
-                    <button class="button button-250">
-                        Узнать подробнее
-                    </button>
+            <div class="swiper services__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide services__slide card">
+                        <img src="img/card-img.png" alt="" class="card__img">
+                        <h4 class="card__title">Перевозка негабаритных и тяжеловесных грузов</h4>
+                        <p class="card__descr">Надёжная транспортировка крупногабаритных и тяжелых грузов</p>
+                        <button class="button button-250">Узнать подробнее</button>
+                    </div>
+                    <div class="swiper-slide services__slide card">
+                        <img src="img/card-img.png" alt="" class="card__img">
+                        <h4 class="card__title">Опасный груз</h4>
+                        <p class="card__descr">Безопасная доставка опасных и химических материалов</p>
+                        <button class="button button-250">Узнать подробнее</button>
+                    </div>
+                    <div class="swiper-slide services__slide card">
+                        <img src="img/card-img.png" alt="" class="card__img">
+                        <h4 class="card__title">Температурный груз</h4>
+                        <p class="card__descr">Перевозка грузов c контролируемым температурным режимом</p>
+                        <button class="button button-250">Узнать подробнее</button>
+                    </div>
+                    <div class="swiper-slide services__slide card">
+                        <img src="img/card-img.png" alt="" class="card__img">
+                        <h4 class="card__title">Температурный груз</h4>
+                        <p class="card__descr">Перевозка грузов c контролируемым температурным режимом</p>
+                        <button class="button button-250">Узнать подробнее</button>
+                    </div>
+                    <div class="swiper-slide services__slide card">
+                        <img src="img/card-img.png" alt="" class="card__img">
+                        <h4 class="card__title">Температурный груз</h4>
+                        <p class="card__descr">Перевозка грузов c контролируемым температурным режимом</p>
+                        <button class="button button-250">Узнать подробнее</button>
+                    </div>
+                    <div class="swiper-slide services__slide card">
+                        <img src="img/card-img.png" alt="" class="card__img">
+                        <h4 class="card__title">Температурный груз</h4>
+                        <p class="card__descr">Перевозка грузов c контролируемым температурным режимом</p>
+                        <button class="button button-250">Узнать подробнее</button>
+                    </div>
                 </div>
-                <div class="services__slide card">
-                    <img src="img/card-img.png" alt="" class="card__img">
-                    <h4 class="card__title">
-                        Опасный груз
-                    </h4>
-                    <p class="card__descr">
-                        Безопасная доставка опасных и химических материалов
-                    </p>
-                    <button class="button button-250">
-                        Узнать подробнее
-                    </button>
-                </div>
-                <div class="services__slide card">
-                    <img src="img/card-img.png" alt="" class="card__img">
-                    <h4 class="card__title">
-                        Температурный груз
-                    </h4>
-                    <p class="card__descr">
-                        Перевозка грузов c контролируемым температурным режимом
-                    </p>
-                    <button class="button button-250">
-                        Узнать подробнее
-                    </button>
-                </div>
+                <!-- Add Scrollbar -->
+                <div class="swiper-scrollbar services__scrollbar"></div>
             </div>
+
         </div>
     </section>
     <section class="employees">
@@ -573,19 +578,28 @@
             <h2>
                 Наши <span>клиенты</span>
             </h2>
-            <div class="clients__slider">
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
+            <div class="clients__slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
                 </div>
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
-                </div>
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
-                </div>
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
-                </div>
+                <div class="swiper-scrollbar clients__scrollbar"></div>
             </div>
         </div>
     </section>
@@ -815,6 +829,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 </body> 
 </html>
