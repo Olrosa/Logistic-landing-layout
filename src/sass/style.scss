@@ -34,7 +34,11 @@ a {
         margin-bottom: 20px;
         font-weight: 600;
     }
+    &-first {
+        padding: 145px 0 44px 0;
+    }
 }
+
 
 @import 'blocks/button';
 @import 'blocks/form';
