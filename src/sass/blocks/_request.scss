@@ -1,0 +1,43 @@
+.request {
+    &__title {
+        width: calc(50% - 10px);
+    }
+    &__descr {
+        width: calc(50% - 10px);
+        font-size: 18px;
+        color: #990201;
+        font-weight: 400;
+    }
+    &__offer {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        border-radius: 20px;
+        border: 1px solid #E5E5E5;
+        background: #F9F9F9;
+        overflow: hidden;
+    }
+    &__divider {
+        width: 150%;
+        height: 1px;
+        background-color: #C0C0C0;
+        margin-left: -50px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        &-offer {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        &-input {
+            width: calc(50% - 10px);
+            &-100 {
+                width: 100%;
+            }
+        }
+    }
+}
