@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+	src: url('../../fonts/daysone-regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../../fonts/daysone-regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../../fonts/daysone-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../../fonts/daysone-regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../../fonts/daysone-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../../fonts/daysone-regular.svg#daysone-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
