@@ -21,6 +21,9 @@ h2 {
     font-family: "Days One", sans-serif;
     max-width: 880px;
     text-transform: uppercase;
+    .smaller {
+        font-size: 30px;
+    }
     span {
         color: #990201;
     }
