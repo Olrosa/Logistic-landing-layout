@@ -17,6 +17,7 @@
         backdrop-filter: blur(15px);
     }
     &__title {
+        max-width: 810px;
         font-size: 28px;
         font-family: "Days One", sans-serif;
         line-height: 157%; /* 43.96px */

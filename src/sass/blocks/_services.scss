@@ -1,4 +1,7 @@
 .services {
+    &__title {
+        max-width: 980px;
+    }
     &__slider {
         margin-top: 55px;
         display: flex;

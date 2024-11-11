@@ -6,6 +6,12 @@
     }
     &__block {
         width: calc(50% - 15px);
+        &-info {
+            padding-top: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
     &__contacts {
         display: flex;
@@ -39,11 +45,11 @@
             text-decoration: underline;
         }
     }
-    &__button {
+/*     &__button {
         margin-top: 40px;
-    }
+    } */
     &__card {
-        padding: 25px 13px 40px 13px;
+        padding: 40px 13px 40px 13px;
         display: flex;
         gap: 16px;
         border-radius: 20px;
@@ -63,6 +69,7 @@
         object-fit: contain;
         width: 160px;
         height: 130px;
+        margin-top: -20px;
     }
     &__descr {
         font-size: 14px;

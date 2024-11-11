@@ -101,7 +101,7 @@
                 Транспортная <br> компания “АБСОЛЮТ”
             </h1>
             <p class="hero__subtitle">
-                Присоединяйтесь к команде "Абсолют" и откройте новые горизонты в карьере! Мы ценим инициативу, креативность и стремление к совершенству. У нас вы найдете возможности для профессионального роста, интересные задачи и поддержку коллег. Начните свой путь к успеху вместе с нами – ваша карьера ждет!
+                Присоединяйтесь к команде "Абсолют" и откройте новые горизонты в карьере! Мы ценим инициативу, креативность и стремление к совершенству.<br>У нас вы найдете возможности для профессионального роста, интересные задачи и поддержку коллег. Начните свой путь к успеху вместе с нами – ваша карьера ждет!
             </p>
             <button class="button button-250 hero__button">
                 Рассчитать стоимость
@@ -264,13 +264,18 @@
             <h2>
                 жизнь <span>в абсолют</span>
             </h2>
-            <div class="docs__offer">
-                <img src="img/docs_1.png" class="docs__item">
-                <img src="img/docs_1.png" class="docs__item">
-                <img src="img/docs_1.png" class="docs__item">
-                <img src="img/docs_1.png" class="docs__item">
+            <div class="docs__offer live__slider swiper">
+                <div class="swiper-wrapper">
+                    <img src="img/docs_1.png" class="docs__item swiper-slide">
+                    <img src="img/docs_1.png" class="docs__item swiper-slide">
+                    <img src="img/docs_1.png" class="docs__item swiper-slide">
+                    <img src="img/docs_1.png" class="docs__item swiper-slide">
+                    <img src="img/docs_1.png" class="docs__item swiper-slide">
+                    <img src="img/docs_1.png" class="docs__item swiper-slide">
+                </div>
+                <div class="swiper-scrollbar live__scrollbar"></div>
             </div>
-        </div>
+        </div>  
     </section>
     
     <section class="section clients">
@@ -278,19 +283,28 @@
             <h2>
                 Наши <span>клиенты</span>
             </h2>
-            <div class="clients__slider">
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
+            <div class="clients__slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
+                    <div class="swiper-slide clients__slide">
+                        <img src="img/clients_1.png"class="clients__slide-img">
+                    </div>
                 </div>
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
-                </div>
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
-                </div>
-                <div class="clients__slide">
-                    <img src="img/clients_1.png"class="clients__slide-img">
-                </div>
+                <div class="swiper-scrollbar clients__scrollbar"></div>
             </div>
         </div>
     </section>
@@ -339,7 +353,7 @@
                 <span>связь</span> с нами
             </h2>
             <div class="contacts__offer">
-                <div class="contacts__block">
+                <div class="contacts__block contacts__block-info">
                     <div class="contacts__contacts">
                         <div class="contacts__contact">
                             <div class="flex-offer gap-10 al-it-cen">
@@ -493,5 +507,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 </body> 
 </html>

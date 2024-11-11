@@ -16,9 +16,12 @@
         font-size: 16px;
         font-weight: 600;
         max-width: 260px;
+        color: #0F0F0F;
+        line-height: 140%;
+        opacity: .6;
     }
     &__list {
-        width: calc(66% - 10px);
+        width: calc(66.6% - 7px);
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -45,12 +48,24 @@
             height: auto;
             object-fit: contain;
         }
+        &-offer {
+            display: flex;
+            gap: 35px;
+        }
+    }
+    &__price {
+        font-size: 16px;
+        font-weight: 400;
+        color:#990201;
+        span {
+            font-weight: 600;
+        }
     }
     &__content {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        padding: 34px 67px;
+        padding: 34px 0 34px 67px;
     }
     &__title {
         font-size: 24px;
@@ -60,8 +75,14 @@
     }
     &__about {
         display: flex;
-        flex-wrap: wrap;
-        gap: 15px 20px;
+        flex-direction: column;
+        gap: 20px;
         font-size: 14px;
+        line-height: 130%;
+        font-weight: 400;
+        span {
+            color: #990201;
+            font-weight: 600;
+        }
     }
 }

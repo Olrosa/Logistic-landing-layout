@@ -14,7 +14,10 @@
             font-size: 18px;
             font-weight: 600;
             line-height: 140%;
-            max-width: 760px;
+            max-width: 720px;
+        }
+        &__block {
+            width: calc(66.6% - 7px);
         }
         &__offer {
             margin-top: 40px;

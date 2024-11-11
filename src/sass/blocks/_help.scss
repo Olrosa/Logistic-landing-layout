@@ -2,7 +2,13 @@
     &__title {
         display: block;
         max-width: 480px;
-        margin: 0 auto;
+        &-offer {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__block {
+        width: calc(66.6% - 7px);
     }
     &__offer {
         margin-top: 40px;

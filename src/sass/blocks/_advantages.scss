@@ -1,12 +1,17 @@
 .advantages {
     &__subtitle {
         font-size: 20px;
-        text-align: center;
     }
     &__title {
-        max-width: 100%;
+        max-width: 480%;
         margin-top: 20px;
-        text-align: center;
+    }
+    &__titles {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__block {
+        width: calc(66.6% - 7px);
     }
     &__offer {
         margin-top: 30px;
@@ -32,7 +37,7 @@
             border: none;
         }
         &-medium {
-            width: calc(66% - 10px);
+            width: calc(66.6% - 7px);
         }
         &-title {
             font-size: 20px;
