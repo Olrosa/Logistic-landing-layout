@@ -55,6 +55,10 @@
             font-size: 16px;
             font-weight: 700;
             line-height: 130%;
+            transition: .3s all;
+            &:hover {
+                color:#990201;
+            }
         }
         &-item {
             position: relative;

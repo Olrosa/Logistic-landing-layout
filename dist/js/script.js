@@ -14,47 +14,66 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const modal = document.querySelector('.custom-modal');
-    const modalContent = document.querySelector('.custom-modal__content');
-    const closeButton = document.querySelector('.custom-modal__close');
-    const modalImage = document.querySelector('.custom-modal__image');
-    const imageItems = document.querySelectorAll('.docs__item');
+    // Select elements related to the modal
+    const modals = document.querySelectorAll('.custom-modal');
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    const closeButtons = document.querySelectorAll('.custom-modal__close');
 
-    // Function to open the modal and set the image source
-    const openModal = (src) => {
-        modalImage.src = src; // Set the image source
-        modal.classList.add('custom-modal--active'); // Show the modal
-        document.body.classList.add('no-scroll'); // Disable scrolling
+    const openModal = (modal, src = '') => {
+        if (src) {
+            const modalImage = modal.querySelector('.custom-modal__image');
+            if (modalImage) {
+                modalImage.src = src; // Устанавливаем источник изображения
+            }
+        }
+        modal.classList.add('custom-modal--active');
+        document.body.classList.add('no-scroll');
     };
 
-    // Function to close the modal
-    const closeModal = () => {
-        modal.classList.remove('custom-modal--active'); // Hide the modal
-        modalImage.src = ''; // Clear the image source when closing
-        document.body.classList.remove('no-scroll'); // Enable scrolling
+    const closeModal = (modal) => {
+        modal.classList.remove('custom-modal--active');
+        document.body.classList.remove('no-scroll');
+
+        // Очистим src изображения, чтобы не подгружалось старое при следующем открытии
+        const modalImage = modal.querySelector('.custom-modal__image');
+        if (modalImage) {
+            modalImage.src = '';
+        }
     };
 
-    // Add click event to each image item to open the modal
-    imageItems.forEach((item) => {
-        item.addEventListener('click', () => {
-            openModal(item.src); // Pass the clicked image's src to openModal
+    openModalButtons.forEach((button) => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.querySelector(`.custom-modal[data-modal="${modalId}"]`);
+
+        button.addEventListener('click', () => {
+            if (modal) {
+                const src = button.src || button.getAttribute('src'); // Получаем src изображения
+                openModal(modal, src); // Передаем src в функцию открытия модалки
+            }
         });
     });
 
-    // Close modal on click outside the content
-    modal.addEventListener('click', (e) => {
-        if (!modalContent.contains(e.target)) {
-            closeModal();
-        }
+    closeButtons.forEach((button) => {
+        const modal = button.closest('.custom-modal');
+        button.addEventListener('click', () => closeModal(modal));
     });
 
-    // Close modal on click of the close button
-    closeButton.addEventListener('click', closeModal);
+    modals.forEach((modal) => {
+        const modalContent = modal.querySelector('.custom-modal__content');
+        modal.addEventListener('click', (e) => {
+            if (!modalContent.contains(e.target)) {
+                closeModal(modal);
+            }
+        });
+    });
 
-    // Close modal on pressing ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeModal();
+            modals.forEach((modal) => {
+                if (modal.classList.contains('custom-modal--active')) {
+                    closeModal(modal);
+                }
+            });
         }
     });
 
