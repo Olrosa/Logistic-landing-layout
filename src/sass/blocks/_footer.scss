@@ -56,6 +56,10 @@
             font-weight: 700;
             line-height: 130%;
         }
+        &-item {
+            position: relative;
+            cursor: pointer;
+        }
     }
     &__text {
         font-size: 14px;

@@ -14,6 +14,51 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const modal = document.querySelector('.custom-modal');
+    const modalContent = document.querySelector('.custom-modal__content');
+    const closeButton = document.querySelector('.custom-modal__close');
+    const modalImage = document.querySelector('.custom-modal__image');
+    const imageItems = document.querySelectorAll('.docs__item');
+
+    // Function to open the modal and set the image source
+    const openModal = (src) => {
+        modalImage.src = src; // Set the image source
+        modal.classList.add('custom-modal--active'); // Show the modal
+        document.body.classList.add('no-scroll'); // Disable scrolling
+    };
+
+    // Function to close the modal
+    const closeModal = () => {
+        modal.classList.remove('custom-modal--active'); // Hide the modal
+        modalImage.src = ''; // Clear the image source when closing
+        document.body.classList.remove('no-scroll'); // Enable scrolling
+    };
+
+    // Add click event to each image item to open the modal
+    imageItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            openModal(item.src); // Pass the clicked image's src to openModal
+        });
+    });
+
+    // Close modal on click outside the content
+    modal.addEventListener('click', (e) => {
+        if (!modalContent.contains(e.target)) {
+            closeModal();
+        }
+    });
+
+    // Close modal on click of the close button
+    closeButton.addEventListener('click', closeModal);
+
+    // Close modal on pressing ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+
     // SLIDERS
 
     if (document.querySelector('.services__slider')) {
@@ -134,5 +179,6 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
     }
-    
+
+
 });
