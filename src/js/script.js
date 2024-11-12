@@ -132,6 +132,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (document.querySelector('.complex__slider')) {
+        const complexSlider = new Swiper('.complex__slider', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            scrollbar: {
+                el: '.complex__scrollbar', // Уникальная полоса прокрутки
+                draggable: true,
+            },
+            mousewheel: {
+                forceToAxis: true,
+            },
+            breakpoints: {
+                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
+                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+    }
+
     // Инициализация второго слайдера, если элемент существует
     if (document.querySelector('.clients__slider')) {
         const clientsSlider = new Swiper('.clients__slider', {
