@@ -28,3 +28,14 @@
         line-height: 130%;
     }
 }
+
+@media (max-width: 576px) {
+    .card {
+        &__title {
+            font-size: 18px;
+        }
+        &__descr {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -8,3 +8,11 @@
         gap: 20px;
     }
 }
+
+@media (max-width:  576px) {
+    .services {
+        &__slider {
+            margin-top: 20px;
+        }
+    }
+}
