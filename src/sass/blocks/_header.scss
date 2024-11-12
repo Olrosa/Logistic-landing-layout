@@ -98,11 +98,22 @@
 .footer {
     .dropdown {
         top: auto;
-        bottom: -100px;
+        bottom: 0px;
         left: 100%;
         transform: none;
         &-mini {
-            bottom: -50px;
+            bottom: 0;
+        }
+        li {
+            position: static;
+        }
+    }
+    &__nav {
+        &-item {
+            position: static !important;
+        }
+        &-list {
+            position: relative;
         }
     }
 }
