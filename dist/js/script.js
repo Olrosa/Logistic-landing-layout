@@ -151,6 +151,62 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (document.querySelector('.advantages__slider')) {
+        let advantagesSlider = null; // Ссылка на слайдер
+        let initialized = false;
+    
+        function initializeSlider() {
+            if (window.innerWidth < 1024) {
+                if (!initialized) {
+                    // Добавляем классы Swiper и инициализируем слайдер
+                    document.querySelector('.advantages__slider').classList.add('swiper');
+                    document.querySelector('.advantages__slider-offer').classList.add('swiper-wrapper'); // Добавляем swiper-wrapper
+    
+                    // Удаляем элементы с классом advantages__item-empty
+                    document.querySelectorAll('.advantages__item-empty').forEach(item => item.remove());
+    
+                    // Добавляем класс swiper-slide ко всем остальным элементам
+                    document.querySelectorAll('.advantages__item').forEach(item => {
+                        item.classList.add('swiper-slide');
+                    });
+    
+                    advantagesSlider = new Swiper('.advantages__slider', {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                        scrollbar: {
+                            el: '.complex__scrollbar',
+                            draggable: true,
+                        },
+                        mousewheel: {
+                            forceToAxis: true,
+                        },
+                        breakpoints: {
+                            320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
+                            576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                        },
+                    });
+                    initialized = true;
+                }
+            } else {
+                if (initialized) {
+                    // Удаляем классы Swiper и разрушаем слайдер
+                    advantagesSlider.destroy();
+                    advantagesSlider = null;
+                    document.querySelector('.advantages__slider').classList.remove('swiper');
+                    document.querySelector('.advantages__slider-offer').classList.remove('swiper-wrapper'); // Убираем swiper-wrapper
+                    document.querySelectorAll('.advantages__item').forEach(item => item.classList.remove('swiper-slide'));
+                    initialized = false;
+                }
+            }
+        }
+    
+        // Запускаем функцию при загрузке и изменении размера окна
+        window.addEventListener('load', initializeSlider);
+        window.addEventListener('resize', initializeSlider);
+    }
+    
+    
+
     // Инициализация второго слайдера, если элемент существует
     if (document.querySelector('.clients__slider')) {
         const clientsSlider = new Swiper('.clients__slider', {
