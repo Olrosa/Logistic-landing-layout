@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // HEADER
 
-     // Select the burger button, menu, and body
+    // Select the burger button, menu, and body
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.header__nav');
     const body = document.body; // Select the body element
@@ -23,12 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Close the menu when clicking outside
     document.addEventListener('click', function (event) {
+        // Check if the clicked area is outside the menu and the burger button
         if (!menu.contains(event.target) && !burger.contains(event.target)) {
-            burger.classList.remove('active');
-            menu.classList.remove('active');
-            body.classList.remove('no-scroll'); // Remove the no-scroll class
+            // Close the menu and remove the 'no-scroll' class only if the menu is open
+            if (menu.classList.contains('active')) {
+                burger.classList.remove('active');
+                menu.classList.remove('active');
+                // Remove the no-scroll class only if the menu is closed
+                body.classList.remove('no-scroll');
+            }
         }
     });
+
 
 
     // FAQ
@@ -51,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modals = document.querySelectorAll('.custom-modal');
     const openModalButtons = document.querySelectorAll('.open-modal');
     const closeButtons = document.querySelectorAll('.custom-modal__close');
+    const closeModalElements = document.querySelectorAll('[data-modal="close"]'); // Добавляем элементы с data-modal="close"
 
     const openModal = (modal, src = '') => {
         if (src) {
@@ -60,7 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         modal.classList.add('custom-modal--active');
-        document.body.classList.add('no-scroll');
+        document.body.classList.add("no-scroll");
+        console.log('Классы у body после открытия:', document.body.className);
     };
 
     const closeModal = (modal) => {
@@ -82,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (modal) {
                 const src = button.src || button.getAttribute('src'); // Получаем src изображения
                 openModal(modal, src); // Передаем src в функцию открытия модалки
+                
             }
         });
     });
@@ -89,6 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButtons.forEach((button) => {
         const modal = button.closest('.custom-modal');
         button.addEventListener('click', () => closeModal(modal));
+    });
+
+    // Добавляем обработчики для элементов с data-modal="close"
+    closeModalElements.forEach((element) => {
+        element.addEventListener('click', () => {
+            const modal = element.closest('.custom-modal');
+            if (modal) {
+                closeModal(modal);
+            }
+        });
     });
 
     modals.forEach((modal) => {
@@ -111,12 +130,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+
     // SLIDERS
 
     if (document.querySelector('.services__slider')) {
         const servicesSlider = new Swiper('.services__slider', {
-            slidesPerView: 3,
+            slidesPerView: 1.2,
             spaceBetween: 20,
+            initialSlide: 0,
             scrollbar: {
                 el: '.services__scrollbar', // Уникальная полоса прокрутки
                 draggable: true,
@@ -125,9 +146,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
-                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
-                1024: { slidesPerView: 3 },
+                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                1024: { slidesPerView: 3.2 },
             },
         });
     }
@@ -144,9 +165,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
-                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
-                1024: { slidesPerView: 3 },
+                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                1024: { slidesPerView: 3.2 },
             },
         });
     }
@@ -174,15 +195,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         slidesPerView: 3,
                         spaceBetween: 20,
                         scrollbar: {
-                            el: '.complex__scrollbar',
+                            el: '.advantages__scrollbar',
                             draggable: true,
                         },
                         mousewheel: {
                             forceToAxis: true,
                         },
                         breakpoints: {
-                            320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
-                            576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                            320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
+                            576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
                         },
                     });
                     initialized = true;
@@ -220,8 +241,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
-                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                320: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 4 },
             },
         });
@@ -240,8 +261,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
-                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 2.5 },
             },
         });
@@ -260,8 +281,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
-                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 4 },
             },
         });
@@ -280,8 +301,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
-                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 4 },
             },
         });
@@ -300,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1, centeredSlides: true, initialSlide: 0 },
+                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
                 576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 4 },
             },

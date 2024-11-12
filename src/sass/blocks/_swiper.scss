@@ -6,10 +6,12 @@
 .swiper-wrapper {
     width: 100%;
     display: flex;
+    transform: none;
 }
 
 .swiper-slide {
     flex-shrink: 0;
+    
 }
 
 .swiper-scrollbar {

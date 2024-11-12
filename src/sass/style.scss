@@ -17,10 +17,10 @@ html {
     font-variant-numeric: lining-nums proportional-nums;
 }
 
-body {
-    /* overflow-x: hidden; */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw; /* Предотвращаем расширение сайта */
 }
-
 a {
     font-family: "Raleway", sans-serif;
     text-decoration: none;

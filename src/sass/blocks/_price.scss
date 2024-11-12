@@ -70,3 +70,24 @@
         }
     }
 }
+
+@media (max-width: 992px) {
+    .price {
+        &__block {
+            width: 100%;
+        }
+        &__title {
+            max-width: 200px;
+        }
+        &__item {
+            width: 100%;
+            &-price {
+                margin-top: 15px;
+                font-size: 18px;
+            }
+            &-offer {
+                flex-direction: column;
+            }
+        }
+    }
+}
