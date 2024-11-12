@@ -38,3 +38,21 @@
         font-size: 24px;
     }
 }
+
+
+@media (max-width: 992px) {
+    .button {
+        &-big {
+            padding: 19px 0;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .button {
+        &-big {
+            font-size: 18px;
+        }
+    }
+}
