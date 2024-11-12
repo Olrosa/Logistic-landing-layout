@@ -45,6 +45,12 @@ a {
     }
 }
 
+@media (max-width: 1280px) {
+    .wrapper {
+        padding: 0 10px;
+    }
+}
+
 
 @import 'blocks/button';
 @import 'blocks/form';

@@ -1,5 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // HEADER
+
+     // Select the burger button, menu, and body
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.header__nav');
+    const body = document.body; // Select the body element
+
+    // Add a click event listener to the burger button
+    burger.addEventListener('click', function () {
+        // Toggle the 'active' class on the burger button and the menu
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+
+        // Toggle a class on the body to block or allow scrolling
+        if (menu.classList.contains('active')) {
+            body.classList.add('no-scroll');
+        } else {
+            body.classList.remove('no-scroll');
+        }
+    });
+
+    // Close the menu when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!menu.contains(event.target) && !burger.contains(event.target)) {
+            burger.classList.remove('active');
+            menu.classList.remove('active');
+            body.classList.remove('no-scroll'); // Remove the no-scroll class
+        }
+    });
+
+
     // FAQ
     const offers = document.querySelectorAll('.vacansy__item-offer');
 
@@ -13,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
             content.classList.toggle('active');
         });
     });
+
+    // MODALS
 
     // Select elements related to the modal
     const modals = document.querySelectorAll('.custom-modal');
