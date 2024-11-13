@@ -7,6 +7,7 @@
     width: 100%;
     display: flex;
     transform: none;
+    cursor: grab;
 }
 
 .swiper-slide {
@@ -35,3 +36,12 @@
     cursor: pointer;
 }
 
+.advantages__scrollbar {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .advantages__scrollbar {
+        display: flex;
+    }
+}

@@ -4,12 +4,25 @@
         display: flex;
         gap: 20px;
     }
+    h3 {
+        .mob-br {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 576px) {
     .other {
         &__offer {
             margin-top: 20px;
+        }
+        h3 {
+            br {
+                display: none;
+            }
+            .mob-br {
+                display: block;
+            }
         }
     }
 }

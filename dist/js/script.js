@@ -194,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     advantagesSlider = new Swiper('.advantages__slider', {
                         slidesPerView: 3,
                         spaceBetween: 20,
+                        autoHeight: true,
                         scrollbar: {
                             el: '.advantages__scrollbar',
                             draggable: true,

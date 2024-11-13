@@ -11,6 +11,9 @@
 
 @media (max-width:  576px) {
     .services {
+        h2 {
+            font-size: 18px;
+        }
         &__slider {
             margin-top: 20px;
         }

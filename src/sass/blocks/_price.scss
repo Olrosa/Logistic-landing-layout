@@ -91,3 +91,11 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .price {
+        &__descr {
+            font-size: 16px;
+        }
+    }
+}
