@@ -156,4 +156,20 @@
             display: flex;
         }
     }
+    .service__park {
+        .park__item {
+            display: flex;
+            height: auto !important;
+            &-icon {
+                width: 160px;
+                height: 160px;
+                min-width: 160px;
+            }
+        }
+        .park__content {
+            padding: 20px 10px !important;
+            
+        }
+    }
 }
+
