@@ -338,8 +338,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
-                576: { slidesPerView: 2, centeredSlides: false, initialSlide: 0 },
+                320: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 4 },
             },
         });
