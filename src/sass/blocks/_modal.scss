@@ -29,7 +29,6 @@
     max-width: 90%;
     width: 40%;
     max-height: 90%;
-    overflow: auto;
 }
 
 .custom-modal__close {
@@ -117,11 +116,27 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .custom-modal {
+        &__close {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            cursor: pointer;
+        }
+    }
+}
+
 @media (max-width: 992px) {
     .custom-modal-order {
         .custom-modal__content {
             width: 95%;
             margin: 0 auto;
+        }
+    }
+    .custom-modal {
+        &__content {
+            width: 70%;
         }
     }
 }
@@ -160,6 +175,17 @@
         }
         .button {
             margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-modal {
+        &__content {
+            width: 90%;
+        }
+        &__close {
+            right: -10px;
         }
     }
 }

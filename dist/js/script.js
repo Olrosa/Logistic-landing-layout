@@ -59,23 +59,38 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeButtons = document.querySelectorAll('.custom-modal__close');
     const closeModalElements = document.querySelectorAll('[data-modal="close"]'); // Добавляем элементы с data-modal="close"
 
+    let scrollPosition = 0;
+
     const openModal = (modal, src = '') => {
         if (src) {
             const modalImage = modal.querySelector('.custom-modal__image');
             if (modalImage) {
-                modalImage.src = src; // Устанавливаем источник изображения
+                modalImage.src = src;
             }
         }
-        modal.classList.add('custom-modal--active');
+        
+        // Сохраняем текущую позицию прокрутки
+        scrollPosition = window.pageYOffset;
+        
+        // Добавляем класс для блокировки прокрутки
         document.body.classList.add("no-scroll");
+        
+        // Устанавливаем верхний отступ для фиксации положения страницы
+        document.body.style.top = `-${scrollPosition}px`;
+        
+        modal.classList.add('custom-modal--active');
         console.log('Классы у body после открытия:', document.body.className);
     };
 
     const closeModal = (modal) => {
         modal.classList.remove('custom-modal--active');
         document.body.classList.remove('no-scroll');
+        
+        // Восстанавливаем прокрутку
+        document.body.style.top = '';
+        window.scrollTo(0, scrollPosition);
 
-        // Очистим src изображения, чтобы не подгружалось старое при следующем открытии
+        // Очистим src изображения
         const modalImage = modal.querySelector('.custom-modal__image');
         if (modalImage) {
             modalImage.src = '';
@@ -192,9 +207,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
     
                     advantagesSlider = new Swiper('.advantages__slider', {
-                        slidesPerView: 3,
+                        slidesPerView: 1.2,
                         spaceBetween: 20,
                         autoHeight: true,
+                        centeredSlides: true,
                         scrollbar: {
                             el: '.advantages__scrollbar',
                             draggable: true,
@@ -282,8 +298,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
-                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                320: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 3.2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 4 },
             },
         });
@@ -302,8 +318,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 forceToAxis: true,
             },
             breakpoints: {
-                320: { slidesPerView: 1.2, centeredSlides: false, initialSlide: 0 },
-                576: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                320: { slidesPerView: 2.2, centeredSlides: false, initialSlide: 0 },
+                576: { slidesPerView: 3.2, centeredSlides: false, initialSlide: 0 },
                 1024: { slidesPerView: 4 },
             },
         });

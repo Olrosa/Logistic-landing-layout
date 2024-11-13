@@ -94,6 +94,9 @@
     z-index: 10;
     min-width: 250px; /* Set minimum width if needed */
     overflow: hidden;
+    &-offer {
+        justify-content: flex-start;
+    }
 }
 
 .footer {
@@ -360,6 +363,9 @@
                 display: flex;
                 flex-direction: column;
             }
+            &-offer {
+                justify-content: center;
+            }
         }
     }
 }
@@ -377,7 +383,7 @@
 @media (max-width: 400px) {
     .header {
         &__offer {
-            padding-right: 35px;
+            padding-right: 40px;
         }
         &__tel {
             white-space: nowrap;

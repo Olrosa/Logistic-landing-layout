@@ -1,6 +1,7 @@
 .swiper {
     position: relative;
     padding-bottom: 40px;
+    overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -12,8 +13,8 @@
 
 .swiper-slide {
     flex-shrink: 0;
-    
 }
+
 
 .swiper-scrollbar {
     position: absolute;

@@ -77,11 +77,15 @@
         &__slider-offer {
             flex-wrap:nowrap;
             align-items: flex-start; 
-            
+            gap: 0;
         }
         &__item {
+            width: 100%;
             &-empty {
                 display: none;
+            }
+            &-medium {
+                width: 100%;
             }
         }
     }
@@ -108,6 +112,11 @@
             
             &-title {
                 font-size: 18px;
+            }
+            &:last-child {
+                .advantages__descr {
+                    max-width: 100%;
+                }
             }
         }
         &__descr {

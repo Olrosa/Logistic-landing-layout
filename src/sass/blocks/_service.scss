@@ -40,6 +40,7 @@
         }
         &__about {
             margin: 15px 0 20px 0;
+            white-space: wrap;
         }
     }
 }
@@ -71,11 +72,16 @@
             margin-top: 40px;
         }
     }
+    .process {
+        &__block {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .hero.service {
-        padding: 48px 0 34px 0;
+        padding: 88px 0 34px 0;
         .hero {
             &__subtitle {
                 padding: 0;
@@ -88,19 +94,26 @@
         &__form {
             margin-top: 40px;
         }
+        
     }
+
 }
 
 @media (max-width: 576px) {
     .hero.service {
-        padding: 48px 0 34px 0;
+        padding: 88px 0 34px 0;
         background-size: 180%;
+    }
+    .process {
+        &__descr {
+            font-size: 14px;
+        }
     }
 }
 
 @media (max-width: 400px) {
     .hero.service {
-        padding: 48px 0 34px 0;
+        padding: 88px 0 34px 0;
         background-size: 220%;
     }
 }

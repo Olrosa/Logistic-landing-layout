@@ -17,9 +17,9 @@ html {
     font-variant-numeric: lining-nums proportional-nums;
 }
 
-html, body {
+body {
     overflow-x: hidden;
-    max-width: 100vw; /* Предотвращаем расширение сайта */
+    max-width: 100vw;
 }
 a {
     font-family: "Raleway", sans-serif;
