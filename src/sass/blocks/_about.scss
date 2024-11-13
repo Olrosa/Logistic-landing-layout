@@ -45,9 +45,15 @@
     
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .hero.about {
         padding: 88px 0 34px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero.about {
+        
         .hero {
             &__subtitle {
                 margin-top: 20px;
