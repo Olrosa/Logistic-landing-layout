@@ -68,3 +68,59 @@
         font-weight: 600;
     }
 }
+
+@media (max-width: 992px) {
+    .help {
+        &__block {
+            width: 100%;
+        }
+        &__offer {
+            margin-top: 20px;
+        }
+        &__image {
+            &-offer {
+                padding: 10px;
+            }
+        }
+        &__subtitle {
+            font-size: 18px;
+        }
+        &__gps {
+            &-offer {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .help {
+        &__offer {
+            flex-direction: column;
+        }
+        &__image {
+            width: 100%;
+            &-offer {
+                width: 40%;
+            }
+        }
+        &__gps {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .help {
+        &__image {
+            &-offer {
+                width: 60%;
+            }
+        }
+        &__gps {
+            &-offer {
+                width: 60%;
+            }
+        }
+    }
+}

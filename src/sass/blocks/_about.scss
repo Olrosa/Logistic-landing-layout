@@ -44,3 +44,28 @@
     }
     
 }
+
+@media (max-width: 576px) {
+    .hero.about {
+        padding: 88px 0 34px 0;
+        .hero {
+            &__subtitle {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+            &__block {
+                width: 100%;
+            }
+            &__offer {
+                flex-direction: column;
+            }
+            &__item {
+                padding: 30px 10px;
+                width: 100%;
+                &-descr {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
