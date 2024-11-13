@@ -41,3 +41,30 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .request {
+        &__offer {
+            padding: 30px 20px;
+        }
+        &__title {
+            width: 100%;
+            &-offer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        &__descr {
+            width: 80%;
+        }
+        &__form {
+            gap: 20px;
+            &-offer {
+                gap: 10px;
+            }
+            &-input {
+                width: 100%;
+            }
+        }
+    }
+}
