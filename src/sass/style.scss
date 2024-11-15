@@ -34,6 +34,7 @@ a {
 
 .section {
     padding: 44px 0;
+    overflow: hidden;
     &-theme {
         display: block;
         font-size: 20px;
@@ -92,3 +93,4 @@ a {
 @import 'blocks/request';
 @import 'blocks/conts';
 @import 'blocks/modal';
+@import 'blocks/university';

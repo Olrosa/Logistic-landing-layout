@@ -152,8 +152,14 @@
     }
 }
 
-.dropdown-parent:hover .dropdown {
-    display: block; /* Show dropdown on hover */
+@media (min-width: 768px) {
+    .dropdown-parent:hover .dropdown {
+        display: block; /* Show dropdown on hover */
+    }
+}
+
+.dropdown.active {
+    display: block; /* Показать меню при наличии класса active */
 }
 
 .dropdown-parent:hover .header__nav-link, .dropdown-parent:hover .footer__nav-link {

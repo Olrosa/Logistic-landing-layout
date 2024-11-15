@@ -1,0 +1,35 @@
+.hero.university {
+    background-image: url('../../img/partners_bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 164px 0 71px 0;
+    .hero {
+        &__button {
+            margin-top: 20px;
+        }
+        &__subtitle {
+            margin-top: 30px;
+            color: #fff;
+            max-width: 450px;
+        }
+    }
+}
+
+.university {
+    .descr__text-big {
+        max-width: 990px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero.university {
+        padding: 88px 0 71px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero.university {
+
+    }
+}

@@ -35,6 +35,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    if (window.innerWidth < 768) {
+        const dropdownParents = document.querySelectorAll('.dropdown-parent');
+        console.log(dropdownParents); // Check if elements are being selected
+    
+        dropdownParents.forEach(parent => {
+            parent.addEventListener('click', function(event) {
+                event.stopPropagation(); // Stops the event from bubbling up
+    
+                const dropdown = parent.querySelector('.dropdown');
+                if (dropdown) {
+                    // Add a log to check if the dropdown is found
+                    console.log(dropdown);
+    
+                    // Toggle the 'active' class
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+    
+        // Close all dropdowns on click outside
+        document.addEventListener('click', function() {
+            dropdownParents.forEach(parent => {
+                const dropdown = parent.querySelector('.dropdown');
+                if (dropdown) dropdown.classList.remove('active');
+            });
+        });
+    }
+    
+
 
 
     // FAQ

@@ -23,6 +23,15 @@
         font-weight: 600;
         max-width: 660px;
         line-height: 140%;
+        &-big {
+            max-width: 100%;
+            p {
+                padding-left: 17px;
+            }
+        }
+        span {
+            color: #990201;
+        }
     }
 }
 

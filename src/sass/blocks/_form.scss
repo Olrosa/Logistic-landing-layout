@@ -1,4 +1,6 @@
 .form {
+    position: relative;
+    z-index: 1;
     &-offer {
         padding: 45px 0;
         border-radius: 20px;
@@ -85,6 +87,49 @@
             color: #990201;
         }
     }
+}
+
+.checkbox-container.modal {
+    margin: 10px 0;
+    color: #959595;
+    .custom-checkbox {
+        border-radius: 3px;
+        border: 1px solid #C0C0C0;
+    }
+    a {
+        text-decoration: underline;
+        color: #959595;
+    }
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #890201;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked::before {
+    content: '✔';
+    color: #8B0000; /* Dark red checkmark color */
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 992px) {
