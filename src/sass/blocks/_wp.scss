@@ -1,0 +1,153 @@
+.advantages__item-title {
+	max-width: 320px;
+}
+.advantages__item-medium .advantages__item-title {
+	max-width: 100%;
+}
+.advantages__item-medium .advantages__descr {
+	max-width: 700px;
+}
+form {
+	br {
+		display: none;
+	}
+}
+.complex__slider .swiper-wrapper {
+	cursor: auto;
+}
+.card__title {
+	max-width: 100%;
+}
+.custom-modal-service-top {
+	justify-content: flex-start;
+}
+.wpcf7-form-control-wrap {
+    display: contents; /* Снимает влияние обертки на верстку */
+}
+.stages__item {
+	position: relative;
+}
+.stages__number {
+	position: absolute; 
+	top: 50%;
+	transform: translatey(-50%);
+	right: 20px;
+	z-index: 1;
+}
+.stages__title {
+	position: relative;
+	z-index: 2;
+}
+.docs__item {
+	border-radius: 20px;
+}
+.who__item-title {
+	font-size: 18px;
+	max-width: 100%;
+}
+.request__descr {
+	color: #990201;
+}
+.request__descr a {
+	text-decoration: underline;
+}
+.service__park .park__info {
+	height: 100%;
+}
+.park__info {
+	height: 100%;
+}
+.wpcf7-not-valid-tip {
+	display: none;
+}
+.wpcf7-not-valid {
+	border: 2px solid red;
+}
+.wpcf7-list-item {
+	margin: 0;
+}
+.cus-check label input {
+	appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #C0C0C0;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.cus-check label input:checked::before {
+    content: '&#x2714;';
+    color: #C0C0C0; /* Dark red checkmark color */
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cus-check label {
+	display: flex; 
+	align-items: center;
+	gap: 5px;
+	color: #959595; 
+	font-size: 12px
+}
+.cus-check label a {
+	text-decoration: underline;
+}
+.default-content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.default-content h2, .default-content h3, .default-content h4, .default-content h5 {
+	margin: 10px 0;
+}
+.default-content .wp-block-image img {
+	border-radius: 20px;
+}
+.dropdown-parent:hover .footer__nav-link, .dropdown-parent:hover .header__nav-link {
+    color: inherit;
+}
+.dropdown li a:hover {
+	color: #990201 !important;
+}
+
+.dropdown-parent .footer__nav-link {
+	color: inherit;
+}
+.dropdown .footer__nav-link:hover {
+	color: inherit;
+}
+
+.footer__nav-item .footer__nav-link {
+    color: #fff;
+}
+.footer .menu-item-object-page a {
+	color: #fff;
+}
+.footer__nav-item:hover .dropdown-offer>.footer__nav-link {
+	color: #990201;
+}
+.footer .dropdown a {
+	color: #2E2E2E !important;
+}
+.input {
+	font-family: Raleway, sans-serif;
+}
+.wpcf7 form .wpcf7-response-output {
+	color: #2e2e2e;
+	font-family: Raleway, sans-serif;
+	border: none;
+	font-size: 18px;
+}
+.form-btn-calc {
+	margin-top: 0;
+}
+
+@media (max-width: 576px) {
+	.footer .dropdown-offer {
+		justify-content: center;
+	}
+}

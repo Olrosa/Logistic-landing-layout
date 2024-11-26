@@ -51,6 +51,11 @@
         align-items: center;
         gap: 12px;
     }
+    &__frame {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
 }
 
 @media (max-width: 992px) {

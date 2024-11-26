@@ -1,14 +1,16 @@
 .header {
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 10;
     width: 100%;
     background: rgba(255, 255, 255, 0.20);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #C0C0C0;
     &__offer {
+        position: relative;
         display: flex;
         justify-content: space-between;
+        z-index: 10;
     }
     &__logo {
         display: flex;
@@ -22,8 +24,8 @@
         }
         &-descr {
             max-width: 150px;
-            font-size: 12px;
-            font-weight: 700;
+            font-size: 20px;
+            font-weight: 800;
         }
     }
     &__nav {
@@ -64,6 +66,13 @@
         color: #990201;
         font-variant-numeric: lining-nums proportional-nums;
     }
+    &__get {
+        color: #990201;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: underline;
+        cursor: pointer;
+    }
     .burger {
         display: none;
     }
@@ -77,8 +86,24 @@
     backdrop-filter: none;
 }
 
+.header__mobile-offer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-list {
+    height: 100%;
+}
+
+.header__nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 
 .dropdown {
+    
     width: 250px;
     position: absolute;
     top: 100%; /* Position the dropdown below the parent */
@@ -88,12 +113,11 @@
     list-style: none;
     margin: 0;
     padding: 5px 20px;
-    border-radius: 10px;
     border: 1px solid #E5E5E5;
     background: #FFF;
-    z-index: 10;
     min-width: 250px; /* Set minimum width if needed */
     overflow: hidden;
+    z-index: 2;
     &-offer {
         justify-content: flex-start;
     }
@@ -145,11 +169,28 @@
     cursor: pointer;
     color: #2E2E2E;
     font-family: "Days One", sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     transition: .3s all;
     &:hover {
         color:#990201;
     }
+}
+
+.dropdown-2 {
+    margin-top: 13px;
+    li {
+        padding: 7px 0;
+        &::after {
+            display: none;
+        }
+        a {
+            font-size: 12px;
+        }
+    }         
+} 
+
+.dropdown-parent {
+    position: relative;
 }
 
 @media (min-width: 768px) {
@@ -166,7 +207,18 @@
     color:#990201;
 }
 
-.dropdown-parent:hover svg {
+.dropdown-2 {
+    display: none;
+    list-style-type: none;
+}
+.dropdown-parent-2:hover .dropdown-2{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.dropdown-parent:hover .layer-1, .dropdown-parent-2:hover .layer-2 {
     transform: rotate(180deg);
 }
 
