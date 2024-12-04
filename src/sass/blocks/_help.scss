@@ -9,6 +9,7 @@
     }
     &__block {
         width: calc(66.6% - 7px);
+        
     }
     &__offer {
         margin-top: 40px;
@@ -20,17 +21,17 @@
         display: flex;
         align-items: flex-end;
         width: calc(33% - 10px);
-        height: 240px;
         background-image: url('../../img/image_bg.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 20px;
         border: 1px solid #E5E5E5;
+        height: 400px;
         &-offer {
             padding: 20px;
             width: 75%;
-            height: 120px;
+            height: 140px;
             border-radius: 20px;
             border: 1px solid #E5E5E5;
             background: rgba(249, 249, 249, 0.20);
@@ -42,7 +43,7 @@
         display: flex;
         align-items: flex-end;
         width: calc(66% - 10px);
-        height: 240px;
+        height: 400px;
         background-image: url('../../img/gps_bg.png');
         background-position: center;
         background-size: cover;
@@ -52,7 +53,7 @@
         &-offer {
             padding: 20px;
             width: 40%;
-            height: 120px;
+            height: 140px;
             border-radius: 20px;
             border: 1px solid #E5E5E5;
             background: rgba(249, 249, 249, 0.20);
@@ -99,13 +100,20 @@
             flex-direction: column;
         }
         &__image {
+            height: 250px;
             width: 100%;
             &-offer {
                 width: 40%;
+                height: auto;
+                min-height: 100px;
             }
         }
         &__gps {
+            height: 250px;
             width: 100%;
+            &-offer {
+                height: auto;
+            }
         }
     }
 }

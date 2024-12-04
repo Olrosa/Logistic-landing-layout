@@ -35,33 +35,64 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    if (window.innerWidth < 768) {
-        const dropdownParents = document.querySelectorAll('.dropdown-parent');
+    const dropdownParents = document.querySelectorAll('.dropdown-parent');
+        const dropdownParents2 = document.querySelectorAll('.dropdown-parent-2');
         console.log(dropdownParents); // Check if elements are being selected
     
         dropdownParents.forEach(parent => {
             parent.addEventListener('click', function(event) {
+                // Проверка на размер экрана
+                if (window.innerWidth < 768) {
+                    event.stopPropagation(); // Останавливает всплытие события
+            
+                    const dropdown = parent.querySelector('.dropdown');
+                    if (dropdown) {
+                        // Лог для проверки нахождения dropdown
+                        console.log(dropdown);
+            
+                        // Переключение класса 'active' на dropdown
+                        dropdown.classList.toggle('active');
+                        
+                        // Переключение класса 'active' на родительский элемент
+                        parent.classList.toggle('active');
+                    }
+                }
+            });
+        });
+        
+    
+        dropdownParents2.forEach(parent => {
+            parent.addEventListener('click', function(event) {
                 event.stopPropagation(); // Stops the event from bubbling up
     
-                const dropdown = parent.querySelector('.dropdown');
+                const dropdown = parent.querySelector('.dropdown-2');
                 if (dropdown) {
                     // Add a log to check if the dropdown is found
                     console.log(dropdown);
     
-                    // Toggle the 'active' class
+                    // Toggle the 'active' class on dropdown
                     dropdown.classList.toggle('active');
+                    
+                    // Toggle the 'active' class on the parent element
+                    parent.classList.toggle('active');
                 }
             });
         });
     
-        // Close all dropdowns on click outside
+        // Close all dropdowns and remove 'active' class from parents on click outside
         document.addEventListener('click', function() {
             dropdownParents.forEach(parent => {
                 const dropdown = parent.querySelector('.dropdown');
                 if (dropdown) dropdown.classList.remove('active');
+                parent.classList.remove('active'); // Remove 'active' class from parent
+            });
+    
+            dropdownParents2.forEach(parent => {
+                const dropdown = parent.querySelector('.dropdown-2');
+                if (dropdown) dropdown.classList.remove('active');
+                parent.classList.remove('active'); // Remove 'active' class from parent
             });
         });
-    }
     
 
 

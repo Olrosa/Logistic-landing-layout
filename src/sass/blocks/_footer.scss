@@ -108,6 +108,10 @@
 
 @media (max-width: 768px) {
     .footer {
+        &__info {
+            justify-content: flex-start;
+            gap: 20px;
+        }
         &__col {
             &-1 {
                 gap: 20px;
@@ -121,6 +125,13 @@
             &-item {
                 position: relative !important;
             }
+        }
+        &__menus {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .dropdown li::after {
+            display: none;
         }
     }
 }
